@@ -1,7 +1,7 @@
-(define (sqrt_iter guess x)
+(define (cube_iter guess x)
   (if (good-enough? guess x)
       guess
-      (sqrt_iter (improve guess x) x)))
+      (cube_iter (improve guess x) x)))
 
 (define (improve guess x)
   (average (/ x (* guess guess)) (* x 2)))
