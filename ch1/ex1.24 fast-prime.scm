@@ -4,7 +4,7 @@
 (define (expmod base ex mod); base^expt % mod
     (cond 
         ((= ex 0) 1)
-        ((is_even? ex) (remainder (square (expmod base (/ ex 2) mod)) mod))
+        ((is_even? ex) (remainder (square (expmod base (/ ex 2) mod)) mod)) ;这里要用square,因为是正则序
         (else (remainder (* base (expmod base (- ex 1) mod)) mod))))
 
 (define (is_even? x) (= (remainder x 2) 0))

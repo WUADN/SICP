@@ -1,4 +1,3 @@
-#lang sicp
 (define (expmod base ex mod); base^expt % mod
     (cond 
         ((= ex 0) 1)
